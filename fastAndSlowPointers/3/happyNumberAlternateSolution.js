@@ -1,6 +1,4 @@
 const happyNumber = (number) => {
-  //   let slow = squareDigitsAndAdd(number);
-  //   fast = squareDigitsAndAdd(squareDigitsAndAdd(number));
   let slow = number,
     fast = number;
   do {
