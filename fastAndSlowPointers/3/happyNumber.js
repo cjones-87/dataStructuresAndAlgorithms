@@ -54,7 +54,7 @@ const squareDigitsAndAdd = (number) => {
   return sum;
 };
 
-//Time Complexity O(logN)
+//Time Complexity O(N)
 //Space Complexity O(1)
 
 console.log(happyNumber(23)); // should return true
