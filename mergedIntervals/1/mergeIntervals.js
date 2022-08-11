@@ -25,13 +25,13 @@ const mergeIntervals = (intervals) => {
     if (currentStart <= end) {
       end = Math.max(end, currentEnd);
     } else {
-      merged.push([start, end]);
+      merged.push(new Interval(start, end));
       start = currentStart;
       end = currentEnd;
     }
   }
 
-  merged.push([start, end]);
+  merged.push(new Interval(start, end));
   return merged;
 };
 
@@ -45,7 +45,7 @@ let mergeList = [
   new Interval(2, 5),
 ];
 
-mergeIntervals(mergeList); // should return [[1, 5], [6, 13]]
+console.log(mergeIntervals(mergeList)); // should return [[1, 5], [6, 13]]
 
 mergeList = [
   new Interval(7, 9),
@@ -54,4 +54,4 @@ mergeList = [
   new Interval(5, 6),
 ];
 
-mergeIntervals(mergeList); // should return [[1, 4], [5, 6], [7, 9], [10, 13]]
+console.log(mergeIntervals(mergeList)); // should return [[1, 4], [5, 6], [7, 9], [10, 13]]
