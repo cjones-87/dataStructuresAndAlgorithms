@@ -40,12 +40,12 @@ const insertIntervals = (intervals, newInterval) => {
 
 let mergeList = [new Interval(1, 3), new Interval(6, 9)];
 
-insertIntervals(mergeList, new Interval(4, 6)); // => should return [[1, 3], [4, 9]]
+console.log(insertIntervals(mergeList, new Interval(4, 6))); // => should return [[1, 3], [4, 9]]
 
 mergeList = [new Interval(1, 3), new Interval(6, 9)];
 
-insertIntervals(mergeList, new Interval(4, 5)); // => should return [[1, 3], [4, 5], [6, 9]]
+console.log(insertIntervals(mergeList, new Interval(4, 5))); // => should return [[1, 3], [4, 5], [6, 9]]
 
 mergeList = [new Interval(1, 3), new Interval(6, 9)];
 
-insertIntervals(mergeList, new Interval(3, 6)); // => should return [[1, 9]]
+console.log(insertIntervals(mergeList, new Interval(3, 6))); // => should return [[1, 9]]
