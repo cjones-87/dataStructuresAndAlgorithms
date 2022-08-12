@@ -13,12 +13,9 @@ Output: [[-5, 2, 3], [-2, -1, 3]]
 Explanation: There are two unique triplets whose sum is equal to zero.
 */
 
-// [-3, 0, 1, 2, -1, 1, -2]
-// [-3, -2, -1, 0, 1, 1, 2]
-
 const tripletSumToZero = (array) => {
   array.sort((a, b) => a - b);
-  let triplets = new Array(0);
+  let triplets = [];
 
   for (let i = 0; i < array.length; i++) {
     let left = i + 1,
