@@ -22,6 +22,9 @@ const dutchNationalFlag = (array) => {
   return array;
 };
 
+//Time Complexity O(N)
+//Space Complexity O(1)
+
 console.log(dutchNationalFlag([1, 0, 2, 1, 0])); // should return => [0, 0, 1, 1, 2]
 
 console.log(dutchNationalFlag([2, 2, 0, 1, 2, 0])); // should return => [0, 0, 1, 2, 2, 2]
