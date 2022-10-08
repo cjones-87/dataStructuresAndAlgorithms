@@ -2,18 +2,32 @@
 We are given an array containing n objects. Each object, when created, was assigned a unique number from the range 1 to n based on their creation sequence. This means that the object with sequence number 3 was created just before the object with sequence number 4. Write a function to sort the objects in-place on their creation sequence number in O(n) time & without using any extra space. For simplicity, let’s assume we are passed an integer array containing only the sequence numbers, though each number is actually an object.
 */
 
-const cyclicSort = (array) => {
+function cyclicSort(array) {
+  let swapCount = 0;
   let i = 0;
 
-  while (i < array.length) {
-    let j = array[i] - 1;
+  while (i !== array.length - 1 || swapCount !== 0) {
+    if (array[i] > array[i + 1]) {
+      [array[i], array[i + 1]] = [array[i + 1], array[i]];
+      swapCount++;
+    }
 
-    array[i] === array[j] ? i++ : ([array[j], array[i]] = [array[i], array[j]]);
+    i++;
+
+    if (i === array.length) {
+      if (swapCount === 0) {
+        break;
+      } else {
+        i = 0;
+        swapCount = 0;
+      }
+    }
   }
-  return array;
-};
 
-//Time Complexity O(N)
+  return array;
+}
+
+//Time Complexity O(N^2)
 //Space Complexity O(1)
 
 let test = [3, 1, 5, 4, 2];
