@@ -18,11 +18,11 @@ const missingNumber = (array) => {
     }
     k++;
   }
-  return "no missing numbers";
+  return 'no missing numbers';
 };
 
 //Time Complexity O(N)
-//Space Complexity O(N)
+//Space Complexity O(1)
 
 console.log(missingNumber([4, 0, 3, 1])); // should return => 2
 console.log(missingNumber([8, 3, 5, 2, 4, 6, 0, 1])); // should return => 7
